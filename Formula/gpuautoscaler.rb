@@ -5,21 +5,21 @@
 class Gpuautoscaler < Formula
   desc "Kubernetes-native GPU Autoscaler: maximize utilization, minimize cloud costs"
   homepage "https://github.com/holynakamoto/gpuautoscaler"
-  version "1.3.3"
+  version "1.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/holynakamoto/gpuautoscaler/releases/download/v1.3.3/gpuautoscaler_Darwin_x86_64.tar.gz"
-      sha256 "baaf179d239daeb0c96fe8b2b967aded23b06d024974513a6e95800577ba5cf1"
+      url "https://github.com/holynakamoto/gpuautoscaler/releases/download/v1.4.0/gpuautoscaler_Darwin_x86_64.tar.gz"
+      sha256 "9e801a8f8ccbdf8d48049aa3ca3110a4d655ceb46e6edf35a34a3a59729359f1"
 
       def install
         bin.install "gpu-autoscaler"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/holynakamoto/gpuautoscaler/releases/download/v1.3.3/gpuautoscaler_Darwin_arm64.tar.gz"
-      sha256 "ff2a4a320744a806767b2c1757e3a3fba1546aca0d4cf4620283c00f46f5df06"
+      url "https://github.com/holynakamoto/gpuautoscaler/releases/download/v1.4.0/gpuautoscaler_Darwin_arm64.tar.gz"
+      sha256 "ff84994cea64f7f00290569c6bd987da88c5a124b8aa38d7dd61c2956795baad"
 
       def install
         bin.install "gpu-autoscaler"
@@ -29,15 +29,15 @@ class Gpuautoscaler < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/holynakamoto/gpuautoscaler/releases/download/v1.3.3/gpuautoscaler_Linux_x86_64.tar.gz"
-      sha256 "ec06aeb68fa239769432711edbc1db901e64c18f0d66a9aeed54704051a5fa8c"
+      url "https://github.com/holynakamoto/gpuautoscaler/releases/download/v1.4.0/gpuautoscaler_Linux_x86_64.tar.gz"
+      sha256 "a87f048d5324f5ee512de4501db533ff45499ff61671bdd56045ba45b50b5826"
       def install
         bin.install "gpu-autoscaler"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/holynakamoto/gpuautoscaler/releases/download/v1.3.3/gpuautoscaler_Linux_arm64.tar.gz"
-      sha256 "e3c5074055705121a3cfcafc2d18301dd71d98e6e67794f5dae1631907e467b3"
+      url "https://github.com/holynakamoto/gpuautoscaler/releases/download/v1.4.0/gpuautoscaler_Linux_arm64.tar.gz"
+      sha256 "406a51c2194ca0c289370118bf760fcfdb14e3873910e0053659f0306e927f8a"
       def install
         bin.install "gpu-autoscaler"
       end
